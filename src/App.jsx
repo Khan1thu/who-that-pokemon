@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function App() {
 
   const [pokemon, setPokemon] = useState([]);
-  const [pokemonName, setPokemonName] = useState();
+  const [pokemonName, setPokemonName] = useState("");
   const [score, setScore] = useState(0);
 
   const randomPokemon = Math.floor(Math.random() * 155) + 1;
@@ -27,6 +27,7 @@ export default function App() {
       setScore(prev => prev - 1)
       alert("Incorrect, try again")
     }
+    setPokemonName("");
   }
 
   return(
